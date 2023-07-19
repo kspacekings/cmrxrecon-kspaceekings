@@ -56,9 +56,9 @@ trainer = pl.Trainer(max_epochs=args['epoch'])
 
 if args['mode'] == 'train':
 	trainer.fit(varnet,dataloader)
-	torch.save(varnet.state_dict(), str(save_dir/'varnet.h5'))
+	torch.save(varnet.state_dict(), str(save_dir/'Baseline_UNet.h5'))
 elif args['mode'] == 'eval':
-	varnet.load_state_dict(torch.load(str(save_dir/'varnet.h5')))
+	varnet.load_state_dict(torch.load(str(save_dir/'Baseline_UNet.h5')))
 	trainer.test(varnet,test_dataloaders=dataloader)
 
 
