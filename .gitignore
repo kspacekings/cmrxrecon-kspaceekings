@@ -1,0 +1,7 @@
+.vscode/
+*.swp
+*.xlsx#
+__pycache__/
+exp/
+logs/
+lightning_logs/
